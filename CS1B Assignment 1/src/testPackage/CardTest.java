@@ -30,4 +30,9 @@ public class CardTest {
       assertEquals("This is an invalid card.", test.toString());
    }
    
+   @Test
+   public void testEqualsTrue(){
+      Card testTrue = new Card('A', Suit.SPADES);
+      assertEquals(true, equals(testTrue));
+   }
 }
