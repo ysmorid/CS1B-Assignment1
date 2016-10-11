@@ -1,18 +1,17 @@
 package testPackage;
-
 import static org.junit.Assert.*;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class CardTest {
+import gameBasics.Card;
+import gameBasics.Card.Suit;
 
+public class CardTest {
+   Card test = new Card();
+   
    @Test
-   public void test() {
-      fail("Not yet implemented");
+   public void testSetCardValue() {
+      assertEquals(false, test.setCard('k', Suit.SPADES));
+      assertEquals(true, test.setCard('p', Suit.SPADES));
    }
 
 }
