@@ -32,4 +32,16 @@ public class Card {
       return errorFlag;
    }
    
+   public String toString()
+   {
+      String returnValue;
+      if (errorFlag){
+         returnValue = "This is an invalid card."; 
+      }
+      else{
+         returnValue = String.valueOf(value) + " of " + suit;
+      }
+      return returnValue;
+   }
+   
 }
