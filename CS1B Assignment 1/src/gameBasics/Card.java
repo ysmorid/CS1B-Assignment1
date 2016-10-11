@@ -44,4 +44,25 @@ public class Card {
       return returnValue;
    }
    
+   public char getValue(){
+      return value;
+   }
+   
+   public Suit getSuit(){
+      return suit;
+   }
+   
+   public boolean checkError(){
+      return errorFlag;
+   }
+   
+   public boolean equals(Card card){
+      boolean identical = false;
+      
+      if(this.value == card.value &&
+      this.suit == card.suit){
+         identical = true;
+      }
+      return identical;
+   }
 }
