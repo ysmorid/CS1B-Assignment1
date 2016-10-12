@@ -37,7 +37,7 @@ public class Card {
       return errorFlag;
    }
    
-   private boolean isValid(char value, Suit suit){
+   public boolean isValid(char value, Suit suit){
       if (value == 'A' || value == 'K' || value == 'Q' || value == 'J'
             || value == 'T' || (value >= '2' && value <= '9'))
          return true;
