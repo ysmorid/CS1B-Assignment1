@@ -15,21 +15,36 @@ public class Card {
    public Card(char value, Suit suit){
      setCard(value, suit);
    }
+   
+   public Card(Card card){
+      this.value = card.value;
+      this.suit = card.suit;
+   }
      
    public boolean setCard(char value, Suit suit)
    {
       this.suit = suit;
       char upValue = Character.toUpperCase(value);
-            
-      if (upValue == 'A' || upValue == 'K' || upValue == 'Q' || upValue == 'J'
-            || upValue == 'T' || (upValue >= '2' && upValue <= '9'))
+      
+      if(isValid(upValue, suit)){
          this.value = upValue;
-      else
-      {
-         errorFlag = true;
+         errorFlag = false;
+      }
+      else{
          this.value = 'A';
+         errorFlag = true;
       }
       return errorFlag;
+   }
+   
+   private boolean isValid(char value, Suit suit){
+      if (value == 'A' || value == 'K' || value == 'Q' || value == 'J'
+            || value == 'T' || (value >= '2' && value <= '9'))
+         return true;
+      else
+      {
+         return false;
+      }
    }
    
    public String toString()
