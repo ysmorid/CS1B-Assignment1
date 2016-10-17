@@ -8,7 +8,6 @@ public class Card {
    private boolean errorFlag;
   
    public Card(){
-
       this('A', Suit.SPADES);
    }
    
@@ -22,7 +21,7 @@ public class Card {
    
    public Card(boolean errorCheck){
       this('A', Suit.SPADES);
-      errorFlag = true;
+      errorFlag = errorCheck;
    }
      
    public boolean setCard(char value, Suit suit)

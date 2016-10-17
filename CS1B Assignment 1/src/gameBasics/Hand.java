@@ -38,7 +38,9 @@ public class Hand {
    
    public Card inspectCard(int k){
       if (k >= numCards){
-         myCards[numCards].checkError();
+         boolean error = true;
+         Card card = new Card(error);
+         return card;
       }
       return myCards[numCards];
    }
