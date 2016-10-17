@@ -10,5 +10,4 @@ import gameBasics.Hand;
 public class HandTest {
    Hand test = new Hand();
 
-
 }

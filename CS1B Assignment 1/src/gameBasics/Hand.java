@@ -29,7 +29,7 @@ public class Hand {
    }
    
    public String toString(){
-      return String.valueOf(myCards[numCards].getValue() + " of " + myCards[numCards].getSuit());
+      return java.util.Arrays.toString(myCards);
    }
    
    public int getNumCards(){
