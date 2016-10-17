@@ -17,8 +17,7 @@ public class Card {
    }
    
    public Card(Card card){
-      this.value = card.value;
-      this.suit = card.suit;
+      this(card.getValue(), card.getSuit());
    }
      
    public boolean setCard(char value, Suit suit)
