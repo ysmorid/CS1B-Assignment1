@@ -19,6 +19,11 @@ public class Card {
    public Card(Card card){
       this(card.getValue(), card.getSuit());
    }
+   
+   public Card(boolean errorCheck){
+      this('A', Suit.SPADES);
+      errorFlag = true;
+   }
      
    public boolean setCard(char value, Suit suit)
    {

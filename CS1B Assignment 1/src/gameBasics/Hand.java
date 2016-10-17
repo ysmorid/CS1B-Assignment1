@@ -15,10 +15,31 @@ public class Hand {
    }
  
    public boolean takeCard(Card card){
-      
+      if(numCards >= MAX_CARDS){
+         return false;
+      }
+      myCards[numCards] = card;
+      numCards++;
+      return true;
    }
    
    public Card playCard(){
-      
+      numCards--;
+      return myCards[numCards];
+   }
+   
+   public String toString(){
+      return String.valueOf(myCards[numCards].getValue() + " of " + myCards[numCards].getSuit());
+   }
+   
+   public int getNumCards(){
+      return numCards;
+   }
+   
+   public Card inspectCard(int k){
+      if (k >= numCards){
+         myCards[numCards].checkError();
+      }
+      return myCards[numCards];
    }
 }
