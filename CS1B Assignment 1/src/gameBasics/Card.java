@@ -54,7 +54,7 @@ public class Card {
    {
       String returnValue;
       if (errorFlag){
-         returnValue = "This is an invalid card."; 
+         returnValue = "Invalid Card"; 
       }
       else{
          returnValue = String.valueOf(value) + " of " + suit;

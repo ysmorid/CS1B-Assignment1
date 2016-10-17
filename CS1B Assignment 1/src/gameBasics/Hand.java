@@ -29,7 +29,14 @@ public class Hand {
    }
    
    public String toString(){
-      return java.util.Arrays.toString(myCards);
+      StringBuilder array = new StringBuilder();
+      for(int i = 0; i < numCards; i++){
+         array.append(myCards[i]);
+         if(i != numCards-1){
+         array.append(", ");
+         }
+      }
+      return array.toString();
    }
    
    public int getNumCards(){
@@ -42,6 +49,6 @@ public class Hand {
          Card card = new Card(error);
          return card;
       }
-      return myCards[numCards];
+      return myCards[k];
    }
 }
